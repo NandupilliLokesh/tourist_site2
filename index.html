@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:gray;
+  padding: 10px 20px;
+  border-bottom: 1px solid white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: darkgray;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+.video-header {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-overlay h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+}
+
+.card p {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    justify-content:space-between;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-overlay h1 {
+        font-size: 2rem;
+    }
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">TravelXplore</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    <header class="video-header">
+        <video autoplay muted loop class="background-video">
+            <source src="videoplayback.mp4" type="video/mp4">
+            
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Discover Amazing Tourist Destinations</h1>
+        </div>
+    </header>
+    <main class="card-container">
+        <div class="card">
+            <img src="img-9.jpeg" alt="Place 1">
+            <p>Place 1:  The Maldives has beauty and adventure in equal measure.
+                 A popular destination thanks to its stunning beaches and perfect year-round weather,
+                  the Maldives is heaven for adventure-seekers, honeymooners and everyone in between. </p>
+            
+        </div>
+        <div class="card">
+            <img src="img-8.jpeg" alt="Place 2">
+            <p>Place 2: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-7.jpeg" alt="Place 3">
+            <p>Place 3: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-6.jpeg" alt="Place 4">
+            <p>Place 4: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-5.jpeg" alt="Place 5">
+            <p>Place 5: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-4.jpeg" alt="Place 6">
+            <p>Place 6: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-3.jpeg" alt="Place 7">
+            <p>Place 7: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-2.jpeg" alt="Place 8">
+            <p>Place 8: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+        <div class="card">
+            <img src="img-1.jpeg" alt="Place 9">
+            <p>Place 9: The Maldives has beauty and adventure in equal measure.
+                A popular destination thanks to its stunning beaches and perfect year-round weather,
+                 the Maldives is heaven for adventure-seekers, honeymooners and everyone in between.</p>
+        </div>
+    </main>
+</body>
+</html>
+
